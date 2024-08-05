@@ -1,6 +1,6 @@
-rm -fR /usr/local/cpanel/base/frontend/paper_lantern/cruze_redis
-mkdir /usr/local/cpanel/base/frontend/paper_lantern/cruze_redis
-cd /usr/local/cpanel/base/frontend/paper_lantern/cruze_redis
+rm -fR /usr/local/cpanel/base/frontend/jupiter/cruze_redis
+mkdir /usr/local/cpanel/base/frontend/jupiter/cruze_redis
+cd /usr/local/cpanel/base/frontend/jupiter/cruze_redis
 
 echo "Downloading plugin..."
 wget -q https://github.com/cruzehost/redis_cpanel/archive/main.zip -O cruze_redis.zip
@@ -14,7 +14,7 @@ mv redis_cpanel-main/* ./
 #mv redis_cpanel-main/.* ./
 
 # Register plugin with cPanel
-/usr/local/cpanel/scripts/install_plugin /usr/local/cpanel/base/frontend/paper_lantern/cruze_redis --theme paper_lantern
+/usr/local/cpanel/scripts/install_plugin /usr/local/cpanel/base/frontend/jupiter/cruze_redis --theme jupiter
 
 #Cleanup by removing release
 echo "Cleaning Up..."
@@ -23,4 +23,4 @@ rm -rf redis_cpanel-main
 
 # Fix permissions
 echo "Finalizing permissions..."
-chmod -R 755 /usr/local/cpanel/base/frontend/paper_lantern/cruze_redis
+chmod -R 755 /usr/local/cpanel/base/frontend/jupiter/cruze_redis
